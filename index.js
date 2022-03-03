@@ -3,9 +3,7 @@ const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb+srv://admin:admin123@cluster0.gf0nw.mongodb.net/feedbacks?retryWrites=true&w=majority', {
-    useNewUrlParser:true
-})
+
 
 const db = mongoose.connection
 db.on('error',(error)=>console.error(error))
