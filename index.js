@@ -5,7 +5,7 @@ const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
 
-mongoose.connect(process.env.MONGO_DB_URL, {
+mongoose.connect("mongodb+srv://admin:admin123@cluster0.gf0nw.mongodb.net/feedbacks?retryWrites=true&w=majority", {
     useNewUrlParser:true,keepAlive: true, keepAliveInitialDelay: 300000
 }).catch(err => console.error(err));
 
