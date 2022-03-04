@@ -6,6 +6,6 @@ const controller = require('../controller/controller')
 route.get('/api/feedbacks', controller.getData)
 route.post('/api/feedbacks', controller.create)
 route.delete('/api/feedbacks/:id', controller.delete)
-// router.put('/api/feedbacks', controller.update)
+route.put('/api/feedbacks/:id', controller.update)
 
 module.exports=route;
