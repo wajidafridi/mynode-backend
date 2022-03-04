@@ -6,8 +6,8 @@ const app = express()
 const mongoose = require('mongoose')
 
 mongoose.connect(process.env.MONGO_DB_URL, {
-    useNewUrlParser:true
-})
+    useNewUrlParser:true,keepAlive: true, keepAliveInitialDelay: 300000
+}).catch(err => console.error(err));
 
 const db = mongoose.connection
 db.on('error',(error)=>console.error(error))
